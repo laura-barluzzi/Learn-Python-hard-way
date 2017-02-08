@@ -1,0 +1,18 @@
+$def with (room)
+<h2> $room.name </h2>
+<pre>
+$room.description
+</pre>
+$if room.name == "death" or room.name == "The end":
+    <p> <a href="/">Play Again?</a></p>
+$else:
+    <p>
+    <form action="/game" method="POST">       
+        <input type="text" name="action" placeholder="what do you do?" required>
+        <button type="button" class="btn btn-success">NEXT</button>
+    </form>
+    </p>
+    
+    
+<!--<input type="text" name="action"> <input type="SUBMIT" value="Next">
+-->
